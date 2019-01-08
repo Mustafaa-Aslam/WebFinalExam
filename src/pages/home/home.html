@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Upcoming Expiries</h1>
+  <div *ngFor="let med of medicines">
+
+    <ion-card>
+      <ion-card-header>
+        {{med.name}}
+      </ion-card-header>
+      <ion-card-content>
+        <div>
+        {{med.date}} - {{med.time}}
+      </div>
+      {{med.qty}}
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar > 
+    <button ion-button name="add-circle" icon-end (click)="goToAddReminder()">+</button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "FinalExam",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

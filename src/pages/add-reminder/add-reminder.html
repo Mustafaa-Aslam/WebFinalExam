@@ -1,0 +1,42 @@
+<!--
+  Generated template for the AddReminderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addReminder</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <button floating ion-button name="camera" (click)="openCam()"></button>
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="name" [(ngModel)] = "medicine.name" name="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Qty</ion-label>
+      <ion-input type="name" [(ngModel)] = "medicine.qty" name="qty"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="medicine.date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Time</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="medicine.time"></ion-datetime>
+    </ion-item>
+  
+    <button ion-button full color="primary" (click) = "insertReminder()">Submit</button>
+  </ion-list>
+</ion-content>
